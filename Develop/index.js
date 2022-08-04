@@ -1,24 +1,23 @@
 const inquirer = require("inquirer");
 const fs = require ("fs");
-const generateMarkdown = require("./utils/generateMarkdown")
+const generateMarkdown = require("./utils/generateMarkdown");
 
 // const questions = [];
 
 // TODO: Create a function to write README file
 function writeToFile(fileName, data) {
-
+    
 }
 
 //Make sections populate a Table of Contents that can be clicked/go to the corresponding section (Title, Description, Installation, Usage, Contributing, Tests, License, Questions)
 
 // TODO: Create a function to initialize app
 function init() {
-    inquirer
-    .prompt ([
+    inquirer.prompt ([
         //Create Title based on answer
         {
             type: "input",
-            name: "project title",
+            name: "title",
             message: "What is your project title?",
         },
         //Sections will be created with answers: Description, Installation, Usage, Contributing, and Tests.
@@ -29,22 +28,22 @@ function init() {
         },
         {
             type: "input",
-            name: "installation instructions",
+            name: "installation",
             message: "What are the installation instructions?",
         },
         {
             type: "input",
-            name: "usage information",
+            name: "usage",
             message: "What is the usage information?",
         },
         {
             type: "input",
-            name: "contribution guidelines",
+            name: "contribution",
             message: "What are your contribution guidelines?",
         },
         {
             type: "input",
-            name: "test instructions",
+            name: "test",
             message: "What are the test instructions?",
         },
         //License badge will show at top of ReadMe and notice will be added to License section to explain which license app is covered under.
@@ -58,7 +57,7 @@ function init() {
         //Username goes under Questions, with a link to my GitHub profile
         {
             type: "input",
-            name: "github Username",
+            name: "github",
             message: "What is your GitHub Username?",
         },
         //Email added to Questions, with instructions on how to reach me with additional questions
@@ -68,8 +67,9 @@ function init() {
             message: "What is your Email Address?",
         },
     ]) .then (data => {
-        const create = generateMarkdown(data)
-        writeToFile("readMe.md", create)
+        const markdownText = generateMarkdown(data)
+        console.log(markdownText);
+        writeToFile("README.md", markdownText)
     });
 }
 
