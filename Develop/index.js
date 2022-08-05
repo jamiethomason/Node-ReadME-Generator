@@ -1,15 +1,7 @@
 const inquirer = require("inquirer");
-const fs = require ("fs");
+const fs = require("fs");
+const path = require('path');
 const generateMarkdown = require("./utils/generateMarkdown");
-
-// const questions = [];
-
-// TODO: Create a function to write README file
-function writeToFile(fileName, data) {
-    
-}
-
-//Make sections populate a Table of Contents that can be clicked/go to the corresponding section (Title, Description, Installation, Usage, Contributing, Tests, License, Questions)
 
 // TODO: Create a function to initialize app
 function init() {
@@ -52,7 +44,7 @@ function init() {
             name: "license",
             message: "What license is your project using?",
             //Add in choices and connect badge/license description
-            choices: ['Apache', 'Boost', 'BSD', 'MIT'],
+            choices: ['Apache', 'Boost', 'BSD', 'MIT', 'None'],
         },
         //Username goes under Questions, with a link to my GitHub profile
         {
@@ -67,9 +59,11 @@ function init() {
             message: "What is your Email Address?",
         },
     ]) .then (data => {
+        console.log(data);
         const markdownText = generateMarkdown(data)
         console.log(markdownText);
-        writeToFile("README.md", markdownText)
+        fs.writeFileSync(path.join(process.cwd(), 'README.md'), markdownText);
+        // writeToFile("README.md", markdownText)
     });
 }
 
