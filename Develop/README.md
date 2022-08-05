@@ -1,40 +1,45 @@
-# w
+# Project
+
+![GitHub License](https://img.shields.io/badge/License-BSD-blue.svg)
 
 ## Table of Contents
-1. [Description](#Description)
-2. [Installation Instructions](#Installation)
-3. [Usage Information](#Usage)
-4. [Contribution Guidelines](#Contribution)
-5. [Test Instructions](#Test)
-6. [License](#License)
-7. [Questions](#Questions)
+* [Description](#description)
+* [Installation Instructions](#installation-instrutions)
+* [Usage Information](#usage-information)
+* [Contribution Guidelines](#contribution-guidelines)
+* [Test Instructions](#test-instructions)
+* [License](#License)
+* [Questions](#questions)
 
 ## Description
 
-w
+Description
 
 ## Installation Instructions
 
-w
+Install
 
 ## Usage Information
 
-w
+Use
 
 ## Contribution Guidelines
 
-w
+Contribute
 
 ## Test Instructions
 
-w
+Test
 
 ## License
-
+  
+  This project uses BSD license.
+  
 
 # Questions
 
 If you have additional questions, please reach out at:
 
-[GitHub](w)
-[Email](mailto:w)
+[GitHub Profile](User)
+
+[Email](mailto:email@me.com)
